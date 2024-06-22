@@ -1,0 +1,21 @@
+{
+  "name": "language_learner",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run electron\" \"npm run flask\"",
+    "electron": "electron .",
+    "flask": "python D:/PersonalProjects/new_translator/backend/translate_server.py",
+    "package": "electron-packager . Translator --platform=win32 --arch=x64 --out=dist --overwrite --extra-resource=D:/PersonalProjects/new_translator/backend/dist/translate_server.exe"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@electron/packager": "^18.3.3",
+    "electron": "^30.0.1",
+    "electron-packager": "^17.1.2",
+    "concurrently": "^8.0.1"
+  }
+}

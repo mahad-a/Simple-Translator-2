@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Translator Program</title>
+    <link rel="stylesheet" href="translator.css">
+</head>
+<body>
+    <div class="container">
+        <script src="../navigation.js" defer></script> 
+        <h1>Welcome to my Simple Translator!</h1>
+        
+        <label for="textInput">Enter a message in English:</label>
+        <textarea id="textInput" rows="3" placeholder="Enter your message here..."></textarea>
+        
+        <label for="languageSelector">Select Target Language:</label>
+        <select id="languageSelector" class="dropdown"></select>
+        
+        <button id="translateButton">Translate</button>
+        
+        <h2>Here is your message in your desired language:</h2>
+        <textarea id="translationOutput" rows="3" readonly></textarea>
+    </div>
+
+    <script src="translator.js"></script>
+</body>
+</html>

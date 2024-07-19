@@ -4,3 +4,5 @@ frontend/electron/dist/
 frontend/electron/node_modules/
 backend/translate_server.spec
 frontend/electron/package-lock.json
+dist/
+node_modules/

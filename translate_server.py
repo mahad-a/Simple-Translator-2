@@ -3,6 +3,7 @@ import googletrans
 
 app = Flask(__name__)
 
+# pull the Google Translator to translate user text
 def translate(text, target_language):
     try:
         translator = googletrans.Translator() 
@@ -11,10 +12,11 @@ def translate(text, target_language):
     except Exception as e:
         return f"Translation Error: {e}"
 
+# gets all available languages to translate into
 def get_languages():
     return googletrans.LANGUAGES
 
-# Translation routes
+# received request to translate text from js GUI
 @app.route('/translate', methods=['POST'])
 def translate_route():
     data = request.json
@@ -23,6 +25,7 @@ def translate_route():
     translation = googletrans.Translator().translate(text, dest=target_language)
     return jsonify({'translation': translation.text})
 
+# received request to display languages (drop down)
 @app.route('/languages', methods=['GET'])
 def languages():
     languages = googletrans.LANGUAGES

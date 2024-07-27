@@ -5,6 +5,7 @@ const { execFile } = require('child_process');
 let mainWindow;
 let flaskProcess;
 
+// electron js GUI window
 function createWindow() {
     mainWindow = new BrowserWindow({
         width: 600,
@@ -25,6 +26,7 @@ function createWindow() {
 }
 
 app.whenReady().then(() => {
+    // flask server as executable so whenever GUI is initialized, then server is initialized as well
     const flaskExecutable = path.join(__dirname, 'translate_server.exe');
 
     flaskProcess = execFile(flaskExecutable, (err, stdout, stderr) => {
@@ -50,7 +52,7 @@ app.on('activate', () => {
     }
 });
 
-// Properly terminate the Flask process on quit
+// properly terminate the flask server on quit
 app.on('before-quit', () => {
     if (flaskProcess) {
         flaskProcess.kill('SIGINT');

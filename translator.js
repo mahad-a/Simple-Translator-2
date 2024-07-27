@@ -1,18 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log("Page loaded.");
 
-    // Function to populate language dropdown
+    // function to populate language dropdown
     fetchLanguages();
 
-    // Event listener for translation button click
+    // event listener for translation button click
     document.getElementById('translateButton').addEventListener('click', translateText);
 });
 
+// function to get the desired langauge from the user
 function fetchLanguages() {
     console.log("Fetching supported languages...");
-    fetch('http://localhost:5000/languages')
+    fetch('http://localhost:5000/languages') // flask server
     .then(response => response.json())
-    .then(data => {
+    .then(data => { // parse for user's selected language
         console.log("Received supported languages:", data);
         const languages = data.languages;
         const languageSelector = document.getElementById('languageSelector');
@@ -29,6 +30,7 @@ function fetchLanguages() {
     .catch(error => console.error('Error:', error));
 }
 
+// function to translate the user entered text
 function translateText() {
     console.log("Translating text...");
     const textInput = document.getElementById('textInput').value;

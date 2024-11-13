@@ -25,18 +25,6 @@ h1 {
     margin-top: 20px;
 }
 
-.logo {
-    max-width: 150px; 
-    margin-bottom: 20px;
-}
-
-.logo-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: 10px;
-}
-
 .textbox {
     padding: 8px; 
     font-size: 14px;
@@ -73,22 +61,4 @@ h1 {
     border: none;
     font-size: 0px;
     background: none;
-}
-
-.direction-arrow {
-    background-color: transparent; 
-    border: 2px solid #80006f; 
-    border-radius: 50%; 
-    padding: 20px; 
-    font-size: 32px;
-    cursor: pointer; 
-}
-
-.direction-arrow:hover {
-    background-color: #f0f8ea; 
-}
-
-.direction-arrow:active {
-    background-color: #80006f; 
-    color: white; 
 }

@@ -25,14 +25,6 @@ This is a simple translator application built using Electron.js for the front en
 
 ## Usage
 
-### Running the Packaged Executable
-
-1. Package the application: Once electron-builder is installed, run the following command to package your application into an executable:
-   - ```npm run package```
-   - This will create an executable file in the build directory, which you can run directly.
-
-2. Run the executable: Navigate to the build directory and double-click on the executable to run the translator app.
-
 ### Running in Development Mode
 
 If you prefer to run the application using your IDE or in development mode, simply use the following command:
